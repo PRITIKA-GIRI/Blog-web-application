@@ -1,7 +1,20 @@
 <%- include("partials/header.ejs") %>
-    <h1 class="heading">Welcome to <span class="title">Bits & Logics</span> blog</h1>
-    <h2>Recent posts</h2>
-    <a href="/"> <button>Create New post</button></a>
+    <div class="container">
+        <h1 class="heading">Welcome to <span class="titleName"></span> TechTales</h1><br>
+        <h2>Recent posts</h2><br>
+        <% posts.forEach(post => { %>
+        <div class="post-card">
+            <h2><%= post.title %></h2>
+            <p><strong>By:</strong> <%= post.author %></p>
+            <p><%= post.content.substring(0, 200) %>...</p>
+            <p><small>Email: <%= post.email || 'N/A' %></small></p>
+            <a href="/posts/<%= post.id %>">Read More</a>
+        </div>
+        <% }) %>
+        <form action="/create" method="POST">
+         <button class="submitButtons">Create New post</button><br>
+        </form>
+    </div>
    
 
 <%- include("partials/footer.ejs") %>
