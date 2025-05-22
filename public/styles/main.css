@@ -8,11 +8,20 @@
     
     
 }
+
 .container{
     display:block;
     text-align: center;
     height:100vh;
 }
+
+.subcontainer{
+    display: flex;
+    gap:40px;
+    height:300px;
+    background-color: aqua;
+}
+
 footer{
     display:block;
     text-align: center;
