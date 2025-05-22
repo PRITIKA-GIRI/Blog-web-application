@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/styles/main.css">
+<div id="log" style="display: block;">
+  <h2>Login Form</h2>
+  <% if (typeof invalid !== 'undefined' && invalid) { %>
+  <p class="fade-out" style="color: brown;" id="message">Invalid credentials! Try again!</p>
+  <% } %>
+  <form method="POST" action="/login">
+  <input class="input" type="text" name="username" placeholder="Username" required /><br/>
+  <input  class="input" type="password" name="password" placeholder="Password" required /><br/>
+  <button type="submit" class="btn">Login</button>
+  <button type="submit" class="btn cancel" onclick="cancelled()">Cancel</button>
+  </form>
+</div>
+<script>
+  function cancelled(){
+     const loginBox = document.getElementById("log");
+    loginBox.style.display = "none";
+  }
+</script>
