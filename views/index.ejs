@@ -8,15 +8,14 @@
     <h1 class="siteTitle"><span>Crafted </span>Steps</h1>
 
     <p><%=today %></p><br>
-    <h2 id="recent">Recent posts</h2><br>
+    <h3 id="recent">Recent posts</h3><br>
     <div class="subcontainer">
         <% posts.forEach(post => { %>
         <div class="post-card">
-        <h2><%= post.title %></h2>
+        <h1><%= post.title %></h1>
         <p><strong>By:</strong> <%= post.authorName %></p>
-        <p><%= post.content.substring(0, 200) %>...</p>
-        <p><small>Email: <%= post.emails || 'N/A' %></small></p>
-        <a href="/posts/<%= post.id %>">Read More</a>
+        <p  class="post-content"><%= post.content.substring(0, 200) %>...</p>
+        <a href="/displayPosts/<%= post.id %>">Read More</a>
     </div>
     <% }) %>
     </div>

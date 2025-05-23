@@ -15,11 +15,16 @@
 }
 
 .subcontainer{
+    border-radius: 10px;
     margin-left: 40px;
-    display: flex;
-    gap:40px;
-    height:500px;
-    width:1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    column-gap:15px;
+    width:900px;
+    min-height:450px;
+    padding:15px 15px 15px 15px;
     background-color: rgb(244, 244, 242);
 }
 
@@ -86,7 +91,7 @@ footer{
     border-radius: 5%;
     height:400px;
     width:350px;
-    background-color: #e7eaed;
+    background-color: #ebeff4;
     padding-top:5px;
     color:rgb(49, 42, 42);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
@@ -128,4 +133,84 @@ h1, h2, h3{
 .siteTitle span{
     color: #4a7dca ;
 
+}
+.adminPage{
+    margin-left: 20px;
+    height:100vh;
+    justify-content: center;
+}
+
+.post-card{
+    margin:5px 5px 5px 10px;
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #b0c4de;
+}
+.post-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.post-card small {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.post-card a {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 6px 12px;
+  background-color: #4a7dca;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.post-card a:hover {
+  background-color: #345e9e;
+}
+
+.post-content{
+    text-align: justify;
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    padding:20px;
+    max-width: 500px;
+   
+}
+.formContainer h2,label,input{
+    font-family: 'Playfair Display', serif;
+
+}
+.formContainer input,textarea {
+  border: 1px solid #444; /* thicker border */
+  padding: 10px;
+  border-radius: 6px;      /* rounded corners */
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.formContainer btn{
+   margin:0px;
+   
 }
