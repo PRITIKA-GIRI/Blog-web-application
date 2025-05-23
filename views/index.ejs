@@ -20,8 +20,9 @@
     <% }) %>
     </div>
     <br>
-    <div>
-    <ul class="post-titles-list">
+    <div class="post-titles-list">
+    <h3>All Titles</h3>
+    <ul >
         <% posts.forEach(post => { %>
             <li>
                 <a href="/displayPost/<%= post.postId %>"><strong><%= post.title %></strong></a>

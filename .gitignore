@@ -9,3 +9,5 @@ npm-debug.log
 # === Optional: Logs or cache ===
 *.log
 .cache/
+public/images/
+
