@@ -1,5 +1,15 @@
-<% for (int i=posts.length;i>=0;i--){
-        if(i==0){%>
-        <h2>No posts yet.</h2>
-        <%}
-}%>
+<%- include("partials/header.ejs") %>
+
+<div class="post-detail-container">
+    <div class="post-detail-card">
+        <h1>Title:<%= post.title %></h1>
+        <p class="meta"><strong>Author:</strong> <%= post.authorName %> | <strong>Email:</strong> <%= post.emails %></p>
+        <hr>
+        <div class="post-full-content">
+            <p><%= post.content %></p>
+        </div>
+        <a href="/" class="btn">Back to Home</a>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

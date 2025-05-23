@@ -70,16 +70,72 @@ footer{
     align-items: center;
     justify-content: center;
 }
-.about{
+/* .about{
     min-height: calc(100vh - 70px);
-}
-.me{
+} */
+/* .me{
     margin-top: 0px;
     width:1050px;
     margin-left: auto;
     margin-right: auto;
     text-align:justify ;
+} */
+ .about {
+  min-height: calc(100vh - 70px);
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.description {
+  margin-bottom: 20px;
+}
+
+.adminPhoto {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #4a7dca;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.caption {
+  margin-bottom: 30px;
+}
+
+.imageName {
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+
+.me {
+  max-width: 900px;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.me a {
+  color: #4a7dca;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.me a:hover {
+  text-decoration: underline;
+}
+
 
 #log{
     position: absolute;
@@ -214,3 +270,64 @@ h1, h2, h3{
    margin:0px;
    
 }
+.post-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-color: #f5f7fa;
+    min-height: calc(100vh - 120px);
+}
+
+.post-detail-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.post-detail-card h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-family: 'Playfair Display', serif;
+}
+
+.post-detail-card .meta {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.post-detail-card hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.post-full-content {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    white-space: pre-wrap;
+}
+
+.post-detail-card .btn {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a7dca;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.post-detail-card .btn:hover {
+    background-color: #345e9e;
+}
+

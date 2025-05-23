@@ -70,6 +70,19 @@ app.get("/about",(req,res)=>{
     res.render("about.ejs");
 })
 
+app.get("/displayPost/:id",(req,res)=>{
+    const postid = parseInt(req.params.id);
+    const post = posts.find(p => p.postId == postid); 
+
+    if (post) {
+        res.render("displayPost.ejs", {
+            post: post
+        });
+    } else {
+        res.status(404).send("Post not found");
+    }
+})
+
 app.post("/postDetails",(req,res)=>{
     const post={
         postId:postId++,
@@ -77,7 +90,6 @@ app.post("/postDetails",(req,res)=>{
         title:req.body.title,
         content:req.body.content,
         emails:req.body.email
-        // photo:req.body.fileInput
     }
     posts.push(post);
   res.redirect('/');
@@ -86,6 +98,7 @@ app.post("/postDetails",(req,res)=>{
 app.post("/create",(req,res)=>{
     res.render("createPost.ejs");
 })
+
 
 app.listen(port,()=>{
     console.log(`Listening at port ${port}.`)

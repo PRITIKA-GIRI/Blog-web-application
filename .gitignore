@@ -1,0 +1,11 @@
+# === Node.js-related ===
+node_modules/
+npm-debug.log
+.DS_Store
+
+# === Session Secrets / Environment Config ===
+.env
+
+# === Optional: Logs or cache ===
+*.log
+.cache/

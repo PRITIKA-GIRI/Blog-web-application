@@ -1,21 +1,21 @@
 <%- include("partials/header.ejs") %>
 <div class="adminPage">
-    <h2>Welcome, <%= username %></h2>
+    <h1>Welcome, <%= username %></h1>
     <form action="/create" method="POST">
          <button class="btn">Create New post</button><br>
-         <button class="btn"> Edit post</button><br>
-         <button class="btn">Delete post</button><br>
+         <!-- <button class="btn"> Edit post</button><br>
+         <button class="btn">Delete post</button><br> -->
     </form>
       
-    <!-- <h3>Your Posts</h3>
+    <h3>Your Posts</h3>
     <% if (posts.length === 0) { %>
         <p>No posts yet.</p>
     <% } else { %>
-        <ul>
+        <ol>
             <% posts.forEach(post => { %>
                 <li>
-                    <strong><%= post.title %></strong><br>
-                    <p><%= post.content %></p>
+                    <a href="/displayPost/<%= post.postId %>"><strong><%= post.title %></strong></a>
+                    
                     <form action="/edit/<%= post.postId %>" method="GET" style="display:inline;">
                         <button class="btn">Edit</button>
                     </form>
@@ -24,8 +24,8 @@
                     </form>
                 </li>
             <% }); %>
-        </ul>
-    <% } %> -->
+        </ol>
+    <% } %>
 </div>
 </div>
 </div>
