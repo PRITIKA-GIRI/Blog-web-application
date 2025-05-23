@@ -5,9 +5,13 @@ This is a simple blog project built using Node.js and Express.js.
 **Features:**
 
 -Create and display blog posts
+
 -Simple login for admin to view own posts
+
 -View posts with titles, content, author, and email
+
 -Session management for login state
+
 -Basic routing with Express and EJS templating
 
 **How to Run:**
