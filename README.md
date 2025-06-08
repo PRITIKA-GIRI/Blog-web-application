@@ -1,33 +1,49 @@
-**My Portfolio Website**
-A responsive personal portfolio website built with Node.js, Express, EJS, and Bootstrap to showcase my projects, skills, and professional journey.
+**Node.js Blog Project**
 
-**KEY FEATURES**
-Modern UI: Clean, responsive design with Bootstrap 5
+This is a simple blog project built using Node.js and Express.js.
 
-Dynamic Content: EJS templating engine for reusable components
+**Features:**
 
-Organized Sections: Home/About, Projects showcase, Skills display, Contact form
+-Create and display blog posts
 
-Optimized Performance: Lightweight and fast-loading
+-Simple login for admin to view own posts
 
-**TECH STACK**
-Backend: Node.js + Express
+-View posts with titles, content, author, and email
 
-Frontend: Bootstrap 5 + Custom CSS
+-Session management for login state
 
-Templating: EJS with partials (header, footer)
+-Basic routing with Express and EJS templating
 
-Hosting: Render
+**How to Run:**
 
-**INSTALLATION STEPS:**
+-Make sure you have Node.js installed.
 
-Clone the repository:
-git clone https://github.com/your-username/your-portfolio.git
+-Clone this repository.
 
-Install dependencies:
-npm install
+-Run npm install to install dependencies.
 
-Start the development server:
-node app.js
+-Run node index.js to start the server.
 
-Open http://localhost:3000 in your browser
+-Open your browser and go to http://localhost:3000
+
+**Notes:**
+
+-The project uses in-memory storage for posts (no database).
+
+-Login credentials are hardcoded (username: Pritika Giri, password: PritikaAdmin).
+
+-Session data is stored in memory and resets when the server restarts.
+
+-No edit or delete functionality available yet.
+
+-Static files like CSS and images are served from the public folder.
+
+**Future Improvements:**
+
+-Add database support (MongoDB, etc.)
+
+-Implement edit and delete post features
+
+-Secure authentication with hashed passwords
+
+-Improve UI
