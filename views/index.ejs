@@ -13,9 +13,9 @@
         <% posts.forEach(post => { %>
         <div class="post-card">
         <h1><%= post.title %></h1>
-        <p><strong>By:</strong> <%= post.authorName %></p>
+        <p><strong>By:</strong> <%= post.author %></p>
         <p  class="post-content"><%= post.content.substring(0, 200) %>...</p>
-        <a href="/displayPosts/<%= post.id %>">Read More</a>
+        <a href="/displayPost/<%= post.id %>">Read More</a>
     </div>
     <% }) %>
     </div>

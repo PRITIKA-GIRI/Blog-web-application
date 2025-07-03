@@ -3,11 +3,16 @@ import bodyParser from "body-parser";
 import dayjs from "dayjs";
 import session from "express-session";
 import pool from "./db.js";
+import dotenv from "dotenv";
+dotenv.config();
+
+
 const app = express();
 const port = 3000;
 
-const ADMIN_USERNAME = "Pritika Giri";
-const ADMIN_PASSWORD = "PritikaAdmin";
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+
 const today = dayjs().format("YYYY-MM-DD || dddd");
 
 app.set("view cache", false);
